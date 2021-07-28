@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <div class="row">
+    <form>
+      <div class="mb-3">
+       <h2><label for="exampleInputEmail1" class="form-label">Enter Subject</label></h2>
+        <input type="text" name="title" placeholder="Enter Subject " [(ngModel)]="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <h2><label for="exampleInputPassword1" class="form-label">Enter Description</label></h2>
+        <input type="text" name="description" placeholder="Enter description" [(ngModel)]="description" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <h2><label for="status" class="form-label">Assign Status</label></h2>
+        <select (change)="parseValue($event.target.value)" class="form-select" aria-label="Default select example">
+          <option selected [value]="s" *ngFor="let s of options">{{s}}</option>
+        </select>
+      </div>
+      <button (click)="handleAdd()"  type="submit" class="btn btn-outline-dark  me-2 "data-bs-toggle=modal data-bs-target=#submit >Submit</button>
+    </form>
+</div>
+</div>

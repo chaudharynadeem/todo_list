@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Status</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let task of tasks">
+        <tr>
+          <td>{{task.title}}</td>
+          <td>{{task.description}}</td>
+          <td>{{task.status}}</td>
+          <td>{{task.date | date}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
